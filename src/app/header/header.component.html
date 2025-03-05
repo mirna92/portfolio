@@ -1,0 +1,25 @@
+
+<div class="bg-primary-951 font-medium text-lg text-secondry-950 flex  justify-between  flex-wrap p-5 h-auto top-0 sticky z-50">
+    <div class="menuItem flex gap-10 pl-16" >
+    <a  href="" > Home</a>
+    <a href="#skills"> Skills</a>
+    <a href="#projects"> Projects</a>
+    <a href="#contact"> Contact</a>
+    </div>
+    <a mat-icon-button [matMenuTriggerFor]="menu" aria-label="additional links" class="toggler">
+      <img src="/assets/img/menu.svg">
+    </a>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item ><a  href="" > Home</a></button>
+
+      <button mat-menu-item><a  href="#skills" > Skills</a> </button>
+      <button mat-menu-item routerLink="/mobile">   <a href="#projects"> Projects</a> </button>
+      <button  mat-menu-item>
+        <a href="#contact"> Contact</a> 
+      </button>
+    </mat-menu>
+    <!-- <div class="logo">
+        <span class="icon">M</span>
+        <span class="text">irna</span>
+      </div> -->
+</div>

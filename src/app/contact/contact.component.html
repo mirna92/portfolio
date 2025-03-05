@@ -1,0 +1,50 @@
+<div class="lg:mx-16 md:mx-8 mx-4   py-20" >
+    <!-- <h1 class="text-thirdy-50  font-extrabold   mb-8  text-4xl text-right border-b-4 pb-3 border-thirdy-50 w-24"> Contact </h1> -->
+     <div class="grid lg:grid-cols-2 sm:grid-cols-1 md:grid-cols-1   gap-28">
+        <div class="  my-auto" data-aos="fade-right" data-aos-delay="100">
+            <h1 class="font-extrabold lg:text-5xl md:text-3xl text-2xl text-thirdy-50 d my-8 ">Get In Touch
+            </h1>
+            <span class=" font-bold lg:text-xl md:text-xl sm:text-l text-secondry-950 text-wrap leading-relaxed" >Hey there! Want to chat, collaborate? Drop me a line and let's make some magic happen! Whether you've got a question burning a hole in your brain or just want to say hi, I'm all ears. Can't wait to hear from you!
+            </span>
+        </div>
+
+    <div class=" p-10  shadow-2xl  rounded-es-lg   rounded-ee-lg shadow-thirdy-50" data-aos="fade-up" data-aos-delay="100" >
+
+<form #deliveryForm="ngForm" [formGroup]="form" name="deliveryForm"
+(ngSubmit)="(deliveryForm.valid || deliveryForm.disabled) && sendMessage()">
+<mat-card class="!bg-inherit  group ">
+   
+    <mat-form-field appearance="fill" class="w-full !bg-inherit  backdrop-blur-sm ">
+    <mat-label>Name </mat-label>
+    <input type="text" formControlName="name" matInput placeholder="Name" class="w-full" />
+  </mat-form-field>
+  <mat-form-field appearance="fill" class="w-full !bg-inherit  backdrop-blur-sm ">
+    <mat-label>Email </mat-label>
+    <input type="email" formControlName="email" matInput placeholder="Email" class="w-full" />
+  </mat-form-field>
+    <mat-form-field  appearance="fill" class="w-full !bg-inherit  backdrop-blur-sm ">
+      <mat-label>Message</mat-label>
+      <textarea matInput formControlName="message" rows="8"></textarea>
+    </mat-form-field>
+    <div class="" *ngIf="!loading">
+    <button class="btn-primary w-fit flex items-center align-middle gap-4" type="submit">Send Message
+        <img src="../../assets/img/send.svg" >
+    </button>
+    </div>
+    <div class="" *ngIf="loading">
+      <button class="btn-primary w-fit flex items-center align-middle gap-4" type="submit">Sending
+        <div class="loading">
+        <span>.</span>
+        <span>.</span>
+        <span>.</span>
+      </div>
+      </button>
+      </div>
+ 
+</mat-card>
+</form>
+   
+</div>
+
+     </div>
+</div>

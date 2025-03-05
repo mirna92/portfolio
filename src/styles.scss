@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+        --mainColor: #020c1c1a;
+        --secondaryColor: #d094e8fc;
+        --whiteColor:#FDFDFD;
+        --thirdyColor: #c69;
+}
+body{
+        font-family: Roboto, Helvetica Neue, sans-serif;
+        
+}
+
+*::selection{
+        background-color:var(--thirdyColor);
+        }
+        #toast-container > div { opacity:1; }
+        #toast-container{
+                top:0 !important;
+        }
