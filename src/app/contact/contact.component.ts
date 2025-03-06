@@ -26,19 +26,16 @@ constructor(private http:HttpClient,private toaster:ToastrService,private fb: Fo
   });
 }
   ngOninit(){
-    this.toaster.success('Message sent successfully!');
     
   }
   sendMessage(){
     console.log(this.form);
     this.loading=true;
-this.http.post('http://localhost:3000/send-email',this.form.value).subscribe(response=>{
-  console.log('successfully',response);
+   this.http.post('http://localhost:3000/send-email',this.form.value).subscribe(response=>{
   this.toaster.success('Message sent successfully!');
   this.loading=false;
   this.form.reset();
   },error=>{
-    console.log('successfully',error);
     this.toaster.error('Error sending message');
   }
 )
