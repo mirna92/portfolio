@@ -14,10 +14,12 @@ export class SkillsComponent {
   {name:'Angular',describe:'Angular Material UI'},
   {name:'Bootstrap',describe:'Bootstrap'},
   // {name:'PrimeNG',describe:'PrimeNG'},
-  {name:'oracle',describe:'Oracle DataBase Developer'},
   {name:'Scss',describe:'Scss'},
   {name:'CSS',describe:'CSS'},
   {name:'HTML',describe:'HTML'},
+  {name:'oracle',describe:'Oracle DataBase Developer'},
+  {name:'postgres',describe:'Postgresql'},
+  {name:'mongodb',describe:'MongoDB'},
   {name:'Git',describe:'Git'},
   {name:'GitHub',describe:'GitHub'},
   // {name:'JasperServer Reporter',describe:'JasperServer Reporter'}

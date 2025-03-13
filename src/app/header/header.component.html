@@ -22,4 +22,13 @@
         <span class="icon">M</span>
         <span class="text">irna</span>
       </div> -->
+
+
+
+            <div class="flex gap-6 items-center align-middle  mr-2"  >
+  
+            <a class="cursor-pointer  rounded-full  hover:bg-thirdy-50" *ngFor="let link of mediaLinks"  [href]="link.href" target="_blank">
+                <img [src]="link.src" class="w-6"  [alt]="link.alt">
+            </a>
+            </div>
 </div>
