@@ -6,6 +6,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { MatInputModule } from '@angular/material/input';
+import emailjs from 'emailjs-com';
 import AOS from "aos";
 
 @Component({
@@ -18,6 +19,10 @@ import AOS from "aos";
 export class ContactComponent {
   public form:FormGroup;
   loading:boolean=false;
+  private serviceId = '1212';
+  private templateId = '1';
+  private PublicKey = 'yb2mC2WCc7VM0nXLx';
+
 constructor(private http:HttpClient,private toaster:ToastrService,private fb: FormBuilder){
   this.form = this.fb.group({
     name: new FormControl(null, [Validators.required]),
@@ -28,16 +33,13 @@ constructor(private http:HttpClient,private toaster:ToastrService,private fb: Fo
   ngOninit(){
     
   }
-  sendMessage(){
-    console.log(this.form);
+  sendMessage() {
     this.loading=true;
-   this.http.post('http://localhost:3000/send-email',this.form.value).subscribe(response=>{
-  this.toaster.success('Message sent successfully!');
-  this.loading=false;
-  this.form.reset();
-  },error=>{
-    this.toaster.error('Error sending message');
+    return emailjs.send(this.serviceId, this.templateId, this.form.value, this.PublicKey)
+      .then(response => {this.toaster.success('Message sent successfully!');
+        this.loading=false;
+        this.form.reset();})
+      .catch(error => console.error('Error sending email:', error));
   }
-)
-  }
+
 }
