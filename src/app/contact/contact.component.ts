@@ -10,11 +10,10 @@ import emailjs from 'emailjs-com';
 import AOS from "aos";
 
 @Component({
-  selector: 'app-contact',
-  standalone: true,
-  imports: [FormsModule,MatCardModule,MatFormFieldModule,MatInputModule,CommonModule,ReactiveFormsModule],
-  templateUrl: './contact.component.html',
-  styleUrl: './contact.component.scss'
+    selector: 'app-contact',
+    imports: [FormsModule, MatCardModule, MatFormFieldModule, MatInputModule, CommonModule, ReactiveFormsModule],
+    templateUrl: './contact.component.html',
+    styleUrl: './contact.component.scss'
 })
 export class ContactComponent {
   public form:FormGroup;
