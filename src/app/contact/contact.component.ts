@@ -25,7 +25,7 @@ export class ContactComponent {
 constructor(private http:HttpClient,private toaster:ToastrService,private fb: FormBuilder){
   this.form = this.fb.group({
     name: new FormControl(null, [Validators.required]),
-    email: new FormControl(null, [Validators.required]),
+    email: new FormControl(null,  [Validators.required , Validators.pattern(/^\w.+([\.-]?\w.+)@\w+([\.-]?\w+)(\.\w{2,3})+$/)  ]),
     message: new FormControl(null,[Validators.required])
   });
 }
