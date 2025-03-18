@@ -21,8 +21,7 @@
   <mat-form-field appearance="fill" class="w-full !bg-inherit  backdrop-blur-sm ">
     <mat-label>Email </mat-label>
     <input type="email" formControlName="email" matInput placeholder="Email" class="w-full" />
-    <mat-error *ngIf=" !form.get('emailFormControl')?.hasError('required') &&
-        (form.get('emailFormControl')?.hasError('pattern'))">
+    <mat-error *ngIf=" (form.get('email')?.hasError('pattern'))">
     Enter valid email ,Please 
     </mat-error>
   </mat-form-field>
