@@ -18,12 +18,12 @@ export class HeaderComponent {
     },
     {
       src: "assets/img/email.svg",
-      href: "mailto:mirnasliman1992@gmail.com",
+      href: "mailto:mirnasliman92@gmail.com",
       alt: "email svg",
     },
     {
       src: "assets/img/linkedin.svg",
-      href: "",
+      href: "https://www.linkedin.com/in/mirna-sulaiman-55a990210/",
       alt: "linkIn svg",
     },
   ];
