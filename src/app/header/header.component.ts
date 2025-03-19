@@ -23,7 +23,7 @@ export class HeaderComponent {
     },
     {
       src: "assets/img/linkedin.svg",
-      href: "https://www.linkedin.com/in/mirna-sulaiman-55a990210/",
+      href: "www.linkedin.com/in/mirna-sulaiman-55a990210",
       alt: "linkIn svg",
     },
   ];
